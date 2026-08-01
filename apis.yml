@@ -1,8 +1,23 @@
 aid: red-ventures
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/red-ventures.png
 name: Red Ventures
-description: 'Red Ventures is a company surfaced as a portfolio company of iconiq-capital and added to
-  the API Evangelist network as a stub for enrichment. Sector: media. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Red Ventures is a privately held digital marketing and media holding company headquartered
+  in Fort Mill, South Carolina, operating a portfolio of high-growth consumer brands and comparison,
+  commerce, and content businesses including Bankrate, The Points Guy, Lonely Planet, and Allconnect.
+  The company combines proprietary technology, data science, and performance marketing to acquire
+  customers on behalf of its brands and partners. It is a corporate/media holding company and publishes
+  no public developer API program, developer portal, or SDKs on its primary web presence.'
 url: https://raw.githubusercontent.com/api-evangelist/red-ventures/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +27,14 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Media
+- Marketing
+- Digital Marketing
+- Portfolio
+- Holding Company
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +42,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/red-ventures-domain-security.yml
 - type: Website
   url: https://www.redventures.com/
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
