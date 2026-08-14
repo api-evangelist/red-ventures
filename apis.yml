@@ -13,11 +13,14 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/red-ventures.png
 name: Red Ventures
 description: 'Red Ventures is a privately held digital marketing and media holding company headquartered
-  in Fort Mill, South Carolina, operating a portfolio of high-growth consumer brands and comparison,
-  commerce, and content businesses including Bankrate, The Points Guy, Lonely Planet, and Allconnect.
-  The company combines proprietary technology, data science, and performance marketing to acquire
-  customers on behalf of its brands and partners. It is a corporate/media holding company and publishes
-  no public developer API program, developer portal, or SDKs on its primary web presence.'
+  in Fort Mill, South Carolina, operating a portfolio of high-growth consumer comparison, commerce,
+  education, and content businesses including Bankrate, The Points Guy, Lonely Planet, Allconnect,
+  Sage Home Loans, RV Education, and RV Home Client Services. The company combines proprietary
+  technology, data science, and performance marketing to acquire customers on behalf of its brands
+  and partners. It maintains a public GitHub organization of 77 largely-forked internal engineering
+  repositories and a company blog, but publishes no public developer API program: there is no developer
+  portal, API reference, OpenAPI/AsyncAPI/GraphQL contract, first-party SDK, or served /.well-known/
+  discovery document on any Red Ventures-controlled host.'
 url: https://raw.githubusercontent.com/api-evangelist/red-ventures/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -27,7 +30,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-21'
+modified: '2026-08-13'
 tags:
 - Company
 - Media
@@ -35,6 +38,10 @@ tags:
 - Digital Marketing
 - Portfolio
 - Holding Company
+- Publishing
+- Performance Marketing
+- Consumer Finance
+- Travel
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -46,8 +53,41 @@ common:
   url: security/red-ventures-domain-security.yml
 - type: Website
   url: https://www.redventures.com/
+- type: LLMsTxt
+  url: llms/red-ventures-llms.txt
+- type: GitHubOrganization
+  url: https://github.com/RedVentures
+- type: Blog
+  url: https://www.redventures.com/blog
+- type: BlogRSS
+  url: https://www.redventures.com/blog?format=rss
+- type: PrivacyPolicy
+  url: https://www.redventures.com/legal/privacy-policy
+- type: Press
+  url: https://www.redventures.com/press
 x-enrichment:
-  date: '2026-07-21'
+  date: '2026-08-13'
   status: minimal
-  artifacts_added: 1
+  artifacts_added: 2
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Red Ventures runs its corporate presence as a Squarespace marketing site with portfolio,
+    careers, press and legal pages only — api./developer./developers./docs.redventures.com do
+    not resolve in DNS, every /.well-known/ path 404s, and the public RedVentures GitHub org is
+    77 repositories of forked third-party tooling with no API specification and no first-party
+    client SDK.
+  evidence:
+  - url: https://developer.redventures.com/
+    status: 0
+  - url: https://www.redventures.com/openapi.json
+    status: 404
+  - url: https://www.redventures.com/llms.txt
+    status: 404
+  - url: https://www.redventures.com/.well-known/agent-card.json
+    status: 404
+  - url: https://api.github.com/orgs/RedVentures
+    status: 200
+  checked: '2026-08-13'
