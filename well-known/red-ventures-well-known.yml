@@ -1,0 +1,68 @@
+generated: '2026-08-13'
+method: probed
+source: live HTTPS probes of the Red Ventures corporate hosts
+note: >-
+  Every /.well-known/ path probed returned 404 on both the apex and www hosts. Red Ventures
+  runs its corporate site on Squarespace, which answers unmatched paths with either a JSON
+  404 body (security.txt) or the full HTML 404 page (every other path) — neither is a
+  discovery document. NO WellKnown or SecurityTxt pointer is emitted in apis.yml: this file
+  records a verified absence, not a served surface. There is no API host to probe — Red
+  Ventures publishes no developer API program, so apis[] is empty and no OpenAPI servers[]
+  host exists.
+hosts:
+- host: https://www.redventures.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: application/json
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: text/html
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/mcp.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 404
+    content_type: text/html
+- host: https://redventures.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: application/json
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: text/html
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/mcp.json
+    status: 404
+    content_type: text/html
+x-evidence:
+  fetched: '2026-08-13'
+  probe: curl -sIL, following redirects
+  result: no document returned 200 on any probed path

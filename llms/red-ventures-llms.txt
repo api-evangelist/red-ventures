@@ -1,0 +1,56 @@
+# Red Ventures
+
+> Red Ventures is a privately held digital marketing and media holding company headquartered in Fort Mill, South Carolina. It operates a portfolio of consumer comparison, commerce, education and content brands — Bankrate, The Points Guy, Lonely Planet, Allconnect, Sage Home Loans, RV Education and RV Home Client Services — combining proprietary technology, data science and performance marketing to acquire customers on behalf of those brands and their partners.
+
+## Important notes for agents
+
+- Red Ventures publishes **no public developer API program**. There is no developer portal, no API reference, no OpenAPI/AsyncAPI/GraphQL contract, and no first-party SDK on any Red Ventures-controlled host as of 2026-08-13.
+- `api.redventures.com`, `developer.redventures.com`, `developers.redventures.com`, `docs.redventures.com` and `status.redventures.com` do not resolve.
+- Every `/.well-known/` discovery path (`security.txt`, `openid-configuration`, `oauth-authorization-server`, `api-catalog`, `ai-plugin.json`, `agent-card.json`, `agent.json`) returns HTTP 404 on both `redventures.com` and `www.redventures.com`.
+- `www.redventures.com/robots.txt` sets `Disallow: /` for the major AI crawler user agents (ClaudeBot, GPTBot, anthropic-ai, Google-Extended, CCBot, Bytespider, Amazonbot, PerplexityBot-adjacent agents and others). Respect it.
+- Product APIs, where they exist, belong to the individual portfolio brands on their own domains — not to the Red Ventures corporate entity. Do not attribute a brand's API to Red Ventures without checking that brand's own documentation.
+
+## Company
+
+- [Red Ventures](https://www.redventures.com/): Corporate site (Squarespace-hosted marketing site).
+- [Who We Are](https://www.redventures.com/about/who-we-are): Company overview.
+- [Leadership](https://www.redventures.com/about/leadership): Executive team.
+- [Careers](https://www.redventures.com/careers/overview): Open roles and hiring.
+- [Offices](https://www.redventures.com/contact/offices): Locations.
+- [Press](https://www.redventures.com/press): Press releases and media contact (press@redventures.com).
+
+## Portfolio brands
+
+- [Bankrate](https://www.redventures.com/portfolio/bankrate): Personal finance comparison and rate marketplace.
+- [The Points Guy](https://www.redventures.com/portfolio/the-points-guy): Travel rewards and points media.
+- [Lonely Planet](https://www.redventures.com/portfolio/lonely-planet): Travel guides and media.
+- [Allconnect](https://www.redventures.com/portfolio/allconnect): Home services and connectivity marketplace.
+- [Sage Home Loans](https://www.redventures.com/portfolio/sage-home-loans): Mortgage lending.
+- [RV Education](https://www.redventures.com/portfolio/rv-edu): Education vertical.
+- [RV Home Client Services](https://www.redventures.com/portfolio/rv-home-client-services): Home services client operations.
+
+## Engineering and open source
+
+- [GitHub — RedVentures](https://github.com/RedVentures): 77 public repositories, created 2010-12-20. Predominantly forks of third-party open-source tooling (Terraform providers, Go/JS utilities, Debezium, SQLBoiler, GrimoireLab) plus a handful of internal tools (`oktad`, `ruler`, `loupe`, `intake`). No published API specification and no first-party client SDK for a Red Ventures API.
+
+## Content
+
+- [Inspired — the Red Ventures blog](https://www.redventures.com/blog): Company and culture blog.
+- [Blog RSS](https://www.redventures.com/blog?format=rss): RSS 2.0 feed.
+
+## Legal
+
+- [Legal](https://www.redventures.com/legal): Legal index.
+- [Privacy Policy](https://www.redventures.com/legal/privacy-policy)
+- [Cookie Policy](https://www.redventures.com/legal/cookie-policy)
+- [Do Not Sell My Information](https://www.redventures.com/legal/do-not-sell-my-information)
+- [Data Privacy Framework Notice](https://www.redventures.com/legal/data-privacy-framework-notice)
+- Red Ventures publishes no site-wide Terms of Service page (`/terms`, `/legal/terms`, `/legal/terms-of-use` all return 404).
+
+## API Evangelist artifacts in this repo
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/red-ventures/refs/heads/main/apis.yml): APIs.json 0.20 provider profile.
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/red-ventures/refs/heads/main/security/red-ventures-domain-security.yml): TLS/HSTS/DNSSEC/CAA/SPF/DMARC observations.
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/red-ventures/refs/heads/main/well-known/red-ventures-well-known.yml): Recorded absence of every `/.well-known/` discovery document.
+
+<!-- generated: 2026-08-13 | method: generated | source: apis.yml + repo artifacts + live probes of redventures.com (no provider-published /llms.txt: https://www.redventures.com/llms.txt returned HTTP 404, 0 bytes) -->
